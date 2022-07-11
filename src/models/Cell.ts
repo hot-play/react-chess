@@ -20,4 +20,34 @@ export class Cell{
         this.available=false;
         this.id=Math.random();
     }
+
+    isEmptyVertical(target: Cell): boolean{
+        return true;
+    }
+
+    isEmptyHorizontal(target: Cell): boolean{
+        if(this.x !== target.x) {
+            return false;
+        }
+
+        const min = Math.min(this.y, target.y);
+        const max = Math.max(this.y, target.y);
+        for(let i = min + 1; i < max; i++){
+            
+        }
+        return true;
+    }
+
+    isEmptyDiagonal(target: Cell): boolean{
+        return true;
+    }
+
+    moveFigure(target: Cell) {
+        if(this.figure && this.figure?.canMove(target)){
+            this.figure?.moveFigure(target)
+            target.figure = this.figure;
+            this.figure = null;
+        }
+    }
 }
+

@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
 }
+
 .app {
     width: 100vw;
     height: 100vh;
@@ -16,6 +17,7 @@
     display: flex;
     flex-wrap: wrap;
 }
+
 .cell {
     width: 80px;
     height: 80px;
@@ -23,23 +25,35 @@
     justify-content: center;
     align-items: center;
 }
+
 .cell img {
     width: 80px;
     height: 80px;
     position: relative;
 }
+
 .black {
     background-color: deepskyblue;
 }
+
 .white {
     background-color: #eed4ac;
 }
+
 .selected {
     background-color: antiquewhite;
 }
+
 .available {
     height: 30px;
     width: 30px;
     border-radius: 50%;
     background-color: black;
+}
+
+.lost {
+    height: calc(50vw - 60px);
+    padding: 30px;
+    margin-left: 50px;
+    background-color: lightgray;
 }

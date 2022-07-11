@@ -9,8 +9,9 @@ import {Rook} from "./figure/Rook";
 import {Figure} from "./figure/Figure";
 
 export class Board {
-
-    cells:Cell[][]=[]
+    cells:Cell[][]=[];
+    lostWhiteFigures: Figure[] = [];
+    lostBlackFigures: Figure[] = [];
 
     public initCells(){
         for (let i=0;i<8;i++){
@@ -29,6 +30,8 @@ export class Board {
     public getCopyBoard(): Board {
         const newBoard = new Board();
         newBoard.cells = this.cells;
+        newBoard.lostBlackFigures = this.lostBlackFigures;
+        newBoard.lostWhiteFigures = this.lostWhiteFigures;
         return newBoard;
     }
 
